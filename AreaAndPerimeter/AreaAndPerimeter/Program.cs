@@ -20,6 +20,16 @@ namespace AreaAndPerimeter
             double area = 0.5 * basearea * heigth;
             double perimeter = 2 * (basearea * parallel);
             Console.WriteLine($"The Area Of Trapezoid = {area} And The perimeter = {perimeter}.");
+        //3
+        public static void Rectangle()
+        {
+            Console.WriteLine("Enter the length of the square: ");
+            double length = double.Parse(Console.ReadLine());
+            Console.WriteLine("Enter the width of the square: ");
+            double width = double.Parse(Console.ReadLine());
+            double area = length * width;
+            double perimeter = 2 * (length * width);
+            Console.WriteLine($"The Area Of Rectangle = {area} And The perimeter = {perimeter}.");
         }
 
         static void Main(string[] args)
@@ -37,6 +47,7 @@ namespace AreaAndPerimeter
         static void Main(string[] args)
         {
             Square();
+            Rectangle();
             Console.ReadLine();
         }
     }
