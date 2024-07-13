@@ -8,33 +8,23 @@ namespace AreaAndPerimeter
 {
     class Program
     {
-        //4
-        public static void Pyramid()
+        //5
+        public static void Trapezoid()
         {
-            Console.WriteLine("The volum of the Pyramid: ");
-            Console.WriteLine("Enter the base area of the Pyramid: ");
-            double baseArea = double.Parse(Console.ReadLine());
-            Console.WriteLine("Enter the heigth of the square: ");
+            Console.WriteLine("Enter the base area of the trapezoid: ");
+            double basearea = double.Parse(Console.ReadLine());
+            Console.WriteLine("Enter the heigth of the trapezoid: ");
             double heigth = double.Parse(Console.ReadLine());
-            double volum = (1.0 / 3.0) * baseArea * heigth;
-            Console.WriteLine($"The volum Of Pyramid = {volum}");
-            Console.WriteLine("----------------------------------------------------");
-            Console.WriteLine("The surface area of the Pyramid: ");
-            Console.WriteLine("Enter the base area of the Pyramid: ");
-            double baseArea2 = double.Parse(Console.ReadLine());
-            Console.WriteLine("Enter the slant heigth of the square: ");
-            double slantHeigth = double.Parse(Console.ReadLine());
-            Console.WriteLine("Enter the number of sides of the Pyramid: ");
-            double numberOfSides = double.Parse(Console.ReadLine());
-
-            double surfaceArea = baseArea2 + (numberOfSides * 0.5 * baseArea2 * slantHeigth);
-
-            Console.WriteLine($"The surface area of Pyramid= {surfaceArea}.");
+            Console.WriteLine("Enter the parallel of the trapezoid: ");
+            double parallel = double.Parse(Console.ReadLine());
+            double area = 0.5 * basearea * heigth;
+            double perimeter = 2 * (basearea * parallel);
+            Console.WriteLine($"The Area Of Trapezoid = {area} And The perimeter = {perimeter}.");
         }
 
         static void Main(string[] args)
         {
-            Pyramid();
+            Trapezoid();
             Console.ReadLine();
         }
     }
