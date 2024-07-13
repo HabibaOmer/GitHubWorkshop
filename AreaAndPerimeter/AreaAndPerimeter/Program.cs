@@ -8,9 +8,8 @@ namespace AreaAndPerimeter
 {
     class Program
     {
-
-        //5
-        public static void Trapezoid()
+        //6
+        public static void Enhance_Trapezoid()
         {
             Console.WriteLine("---------------------Enhance Trapezoid Function-------------------");
             Console.WriteLine("-Enter the base area of the trapezoid: ");
@@ -27,9 +26,8 @@ namespace AreaAndPerimeter
             Console.WriteLine($"**************The Area Of Trapezoid = {area} And The perimeter = {perimeter}.**************");
         }
         static void Main(string[] args)
-        {
-            //5
-            Trapezoid();
+        {    
+            Enhance_Trapezoid();
             Console.ReadLine();
         }
     }
