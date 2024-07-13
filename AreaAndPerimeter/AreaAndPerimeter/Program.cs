@@ -17,7 +17,7 @@ namespace AreaAndPerimeter
             double perimeter = 4 * sidelength;
             Console.WriteLine($"The Area Of Square = {area} And The perimeter = {perimeter}.");
         }
-                //2
+        //2
         public static void Triangle()
         {
             Console.WriteLine("The Area Of Triangle: ");
@@ -85,6 +85,23 @@ namespace AreaAndPerimeter
             double perimeter = 2 * (basearea * parallel);
             Console.WriteLine($"The Area Of Trapezoid = {area} And The perimeter = {perimeter}.");
         }
+        //6
+        public static void Enhance_Trapezoid()
+        {
+            Console.WriteLine("---------------------Enhance Trapezoid Function-------------------");
+            Console.WriteLine("-Enter the base area of the trapezoid: ");
+            double basearea = double.Parse(Console.ReadLine());
+            Console.WriteLine("----------------------------------------");
+            Console.WriteLine("-Enter the heigth of the trapezoid: ");
+            double heigth = double.Parse(Console.ReadLine());
+            Console.WriteLine("----------------------------------------");
+            Console.WriteLine("-Enter the parallel of the trapezoid: ");
+            double parallel = double.Parse(Console.ReadLine());
+            Console.WriteLine("----------------------------------------");
+            double area = 0.5 * basearea * heigth;
+            double perimeter = 2 * (basearea * parallel);
+            Console.WriteLine($"**************The Area Of Trapezoid = {area} And The perimeter = {perimeter}.**************");
+        }
 
         static void Main(string[] args)
         {    
@@ -92,7 +109,8 @@ namespace AreaAndPerimeter
             Triangle();
             Rectangle();
             Pyramid();
-            Trapezoid();
+            Enhance_Trapezoid();
+            Trapezoid(); 
             Console.ReadLine();
         }
     }
