@@ -12,15 +12,19 @@ namespace AreaAndPerimeter
         //5
         public static void Trapezoid()
         {
-            Console.WriteLine("Enter the base area of the trapezoid: ");
+            Console.WriteLine("---------------------Enhance Trapezoid Function-------------------");
+            Console.WriteLine("-Enter the base area of the trapezoid: ");
             double basearea = double.Parse(Console.ReadLine());
-            Console.WriteLine("Enter the heigth of the trapezoid: ");
+            Console.WriteLine("----------------------------------------");
+            Console.WriteLine("-Enter the heigth of the trapezoid: ");
             double heigth = double.Parse(Console.ReadLine());
-            Console.WriteLine("Enter the parallel of the trapezoid: ");
+            Console.WriteLine("----------------------------------------");
+            Console.WriteLine("-Enter the parallel of the trapezoid: ");
             double parallel = double.Parse(Console.ReadLine());
+            Console.WriteLine("----------------------------------------");
             double area = 0.5 * basearea * heigth;
             double perimeter = 2 * (basearea * parallel);
-            Console.WriteLine($"The Area Of Trapezoid = {area} And The perimeter = {perimeter}.");
+            Console.WriteLine($"**************The Area Of Trapezoid = {area} And The perimeter = {perimeter}.**************");
         }
         static void Main(string[] args)
         {
