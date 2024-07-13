@@ -8,19 +8,37 @@ namespace AreaAndPerimeter
 {
     class Program
     {
-        //5
-        public static void Trapezoid()
+        //1
+        public static void Square()
         {
-            Console.WriteLine("Enter the base area of the trapezoid: ");
-            double basearea = double.Parse(Console.ReadLine());
-            Console.WriteLine("Enter the heigth of the trapezoid: ");
+            Console.WriteLine("Enter the sidelength of the square: ");
+            double sidelength = double.Parse(Console.ReadLine());
+            double area = sidelength * sidelength;
+            double perimeter = 4 * sidelength;
+            Console.WriteLine($"The Area Of Square = {area} And The perimeter = {perimeter}.");
+        }
+                //2
+        public static void Triangle()
+        {
+            Console.WriteLine("The Area Of Triangle: ");
+            Console.WriteLine("Enter the baselength of the triangle: ");
+            double baselength = double.Parse(Console.ReadLine());
+            Console.WriteLine("Enter the heigth of the triangle: ");
             double heigth = double.Parse(Console.ReadLine());
-            Console.WriteLine("Enter the parallel of the trapezoid: ");
-            double parallel = double.Parse(Console.ReadLine());
-            double area = 0.5 * basearea * heigth;
-            double perimeter = 2 * (basearea * parallel);
-            Console.WriteLine($"The Area Of Trapezoid = {area} And The perimeter = {perimeter}.");
-        //3
+            double area = 0.5 * baselength * heigth;
+            Console.WriteLine($"The Area Of Triangle = {area}.");
+            Console.WriteLine("----------------------------------------------------");
+            Console.WriteLine("The perimeter Of Triangle: ");
+            Console.WriteLine("Enter the length of the first side of the triangle: ");
+            double side1 = double.Parse(Console.ReadLine());
+            Console.WriteLine("Enter the length of the secound side of the triangle: ");
+            double side2 = double.Parse(Console.ReadLine());
+            Console.WriteLine("Enter the length of the third side of the triangle: ");
+            double side3 = double.Parse(Console.ReadLine());
+            double perimeter = side1 + side2 + side3;
+            Console.WriteLine($"The perimeter Of Triangle = {perimeter}.");
+        }
+         //3
         public static void Rectangle()
         {
             Console.WriteLine("Enter the length of the square: ");
@@ -30,6 +48,7 @@ namespace AreaAndPerimeter
             double area = length * width;
             double perimeter = 2 * (length * width);
             Console.WriteLine($"The Area Of Rectangle = {area} And The perimeter = {perimeter}.");
+        }
         //4
         public static void Pyramid()
         {
@@ -53,48 +72,27 @@ namespace AreaAndPerimeter
 
             Console.WriteLine($"The surface area of Pyramid= {surfaceArea}.");
         }
+        //5
+        public static void Trapezoid()
+        {
+            Console.WriteLine("Enter the base area of the trapezoid: ");
+            double basearea = double.Parse(Console.ReadLine());
+            Console.WriteLine("Enter the heigth of the trapezoid: ");
+            double heigth = double.Parse(Console.ReadLine());
+            Console.WriteLine("Enter the parallel of the trapezoid: ");
+            double parallel = double.Parse(Console.ReadLine());
+            double area = 0.5 * basearea * heigth;
+            double perimeter = 2 * (basearea * parallel);
+            Console.WriteLine($"The Area Of Trapezoid = {area} And The perimeter = {perimeter}.");
+        }
 
         static void Main(string[] args)
-        {
-            Trapezoid();
-        //1
-        public static void Square()
-        {
-            Console.WriteLine("Enter the sidelength of the square: ");
-            double sidelength = double.Parse(Console.ReadLine());
-            double area = sidelength * sidelength;
-            double perimeter = 4 * sidelength;
-            Console.WriteLine($"The Area Of Square = {area} And The perimeter = {perimeter}.");
-        }
-        static void Main(string[] args)
-        {
+        {    
             Square();
+            Triangle();
             Rectangle();
             Pyramid();
-        //2
-        public static void Triangle()
-        {
-            Console.WriteLine("The Area Of Triangle: ");
-            Console.WriteLine("Enter the baselength of the triangle: ");
-            double baselength = double.Parse(Console.ReadLine());
-            Console.WriteLine("Enter the heigth of the triangle: ");
-            double heigth = double.Parse(Console.ReadLine());
-            double area = 0.5 * baselength * heigth;
-            Console.WriteLine($"The Area Of Triangle = {area}.");
-            Console.WriteLine("----------------------------------------------------");
-            Console.WriteLine("The perimeter Of Triangle: ");
-            Console.WriteLine("Enter the length of the first side of the triangle: ");
-            double side1 = double.Parse(Console.ReadLine());
-            Console.WriteLine("Enter the length of the secound side of the triangle: ");
-            double side2 = double.Parse(Console.ReadLine());
-            Console.WriteLine("Enter the length of the third side of the triangle: ");
-            double side3 = double.Parse(Console.ReadLine());
-            double perimeter = side1 + side2 + side3;
-            Console.WriteLine($"The perimeter Of Triangle = {perimeter}.");
-        }
-        static void Main(string[] args)
-        {
-            Triangle();
+            Trapezoid();
             Console.ReadLine();
         }
     }
